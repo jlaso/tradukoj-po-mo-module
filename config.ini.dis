@@ -1,0 +1,6 @@
+[jlaso_translations_api_access]
+project_id = ?
+key = ?
+secret = ?
+url = 'https://www.tradukoj.com/api/'
+managed_locales = ?

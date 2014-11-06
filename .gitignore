@@ -1,0 +1,8 @@
+# prevent privacy data
+config.ini
+
+# log for errors with API
+last-error.html
+
+# IntelliJ folder
+.idea

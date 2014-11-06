@@ -1,0 +1,25 @@
+{
+    "name": "jlaso/tradukoj-po-mo-module",
+    "version": "1.0",
+    "description": "Client API for https://www.tradukoj.com for gettext",
+    "keywords": ["api", "translations", "symfony", "tradukoj", "gettext"],
+    "homepage": "https://github.com/jlaso/tradukoj-po-mo-module",
+    "type": "app",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Patrick JL Laso",
+            "email": "wld1373@gmail.com",
+            "homepage": "http://www.patricklaso.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.7",
+        "liuggio/excelbundle": "~2.0"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": { "JLaso\\TradukojPoMoModule": "" }
+    },
+    "target-dir": "JLaso/TradukojPoMoModule"
+}
