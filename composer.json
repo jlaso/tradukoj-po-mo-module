@@ -1,7 +1,7 @@
 {
     "name": "jlaso/tradukoj-po-mo-module",
-    "version": "1.0",
-    "description": "Client API for https://www.tradukoj.com for gettext",
+    "version": "1.0.1",
+    "description": "Gettext client API for https://www.tradukoj.com",
     "keywords": ["api", "translations", "symfony", "tradukoj", "gettext"],
     "homepage": "https://github.com/jlaso/tradukoj-po-mo-module",
     "type": "app",
@@ -14,12 +14,6 @@
         }
     ],
     "require": {
-        "php": ">=5.3.7",
-        "liuggio/excelbundle": "~2.0"
-    },
-    "minimum-stability": "stable",
-    "autoload": {
-        "psr-0": { "JLaso\\TradukojPoMoModule": "" }
-    },
-    "target-dir": "JLaso/TradukojPoMoModule"
+        "php": ">=5.3",
+    }
 }
