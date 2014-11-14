@@ -10,13 +10,14 @@ This is an alone program that allows to synchronize your po files with tradukoj 
 First of all, you need
 
   - Clone this project whenever you want in your computer
+  - launch ```composer install```
   - Create an account in [tradukoj.com](https://www.tradukoj.com) and create a project
   - copy the file config.ini.dis as config.ini and copy the data of project into it
 
 Version
 ----
 
-1.0
+1.0.2
 
 
 Installation
@@ -24,12 +25,15 @@ Installation
 
 ```sh
 git clone https://github.com/jlaso/tradukoj-po-mo-module tradukoj-po-mo-sync
+cd tradukoj-po-mo-sync
+composer install  # to install dependencies
 ```
+
 
 You can also add the module by composer.json, adding in require clause:
 ```
 {
-    "jlaso/tradukoj-po-mo-module": "1.0"
+    "jlaso/tradukoj-po-mo-module": "*"
 }
 ```
 
@@ -55,6 +59,15 @@ cd tradukoj-po-mo-sync
 php sync.php --help / to obtain help
 php sync.php --upload=yes --dir=path-to-your-locale-files
 ```
+
+Tool to transform csv files to po files
+---------------------------------------
+
+```sh
+php csv2po.php --input=sample.csv
+```
+
+Look inside sample.csv to know the correct format that the tools expects.
 
 Example
 -------

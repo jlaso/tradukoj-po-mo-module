@@ -6,3 +6,7 @@ last-error.html
 
 # IntelliJ folder
 .idea
+
+# composer
+vendor
+composer.lock

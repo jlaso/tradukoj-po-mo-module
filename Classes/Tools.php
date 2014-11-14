@@ -84,8 +84,9 @@ msgstr "{$message}"
 EOD;
 
         }
-        file_put_contents($file.".po", $contents);
+        file_put_contents($file . ".po", $contents);
 
+        return $file . ".po";
     }
 
 

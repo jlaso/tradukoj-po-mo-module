@@ -1,6 +1,6 @@
 {
     "name": "jlaso/tradukoj-po-mo-module",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Gettext client API for https://www.tradukoj.com",
     "keywords": ["api", "translations", "symfony", "tradukoj", "gettext"],
     "homepage": "https://github.com/jlaso/tradukoj-po-mo-module",
@@ -14,6 +14,7 @@
         }
     ],
     "require": {
-        "php": ">=5.3"
+        "php": ">=5.3",
+        "jlaso/console-args": "dev-master"
     }
 }
