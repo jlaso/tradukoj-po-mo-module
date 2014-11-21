@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: demo\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es_ES\n"
-"X-Generator: Tradukoj po module 1.0\n"
+"X-Generator: Poedit 1.6.9\n"
 
 #: here the comment for this translation
 msgid "general._d_records_found"
@@ -29,4 +29,4 @@ msgstr "esto es una cadena de prueba"
 
 #: here the comment for this translation
 msgid "test.test2"
-msgstr "esto es otra prueba"
+msgstr "esto es otra prueba áéíóúñÑ"
