@@ -3,14 +3,14 @@
 
 $currentDir = dirname(__FILE__);
 
+require_once($currentDir . '/vendor/autoload.php');
 require_once($currentDir . '/Classes/PoClass.php');
 require_once($currentDir . '/Classes/ClientSocketService.php');
-require_once($currentDir . '/Classes/ConsoleArgs.php');
 require_once($currentDir . '/Classes/Tools.php');
 
 $config = Tools::readConfig($currentDir);
 
-$args = new ConsoleArgs($argv, array('help'), array('upload', 'dir'));
+$args = new \JLaso\ConsoleArgs\ConsoleArgs($argv, array('help'), array('upload', 'dir'));
 
 if(!($baseDir = $args->getDir) || $args->hasHelp){
     print <<<EOD
@@ -28,3 +28,5 @@ $baseDir = preg_replace("/^\.\//", $currentDir . '/', $baseDir);
 print "\nstarting command on {$baseDir}\n\n";
 
 Tools::syncTranslations($baseDir, $config, "yes" == $args->getUpload);
+
+print "\n\nDone!\n";

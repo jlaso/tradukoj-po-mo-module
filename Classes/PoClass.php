@@ -35,6 +35,134 @@ class PoClass
         return $obj;
     }
 
+    protected function cleanText($str)
+    {
+        $conv = array(
+            "&" => "&amp;",
+            "<" => "&lt;",
+            ">" => "&gt;",
+            "0" => "&nbsp;",
+            "¡" => "&iexcl;",
+            "¢" => "&cent;",
+            "£" => "&pound;",
+            "¤" => "&curren;",
+            "¥" => "&yen;",
+            "¦" => "&brvbar;",
+            "§" => "&sect;",
+            "¨" => "&uml;",
+            "©" => "&copy;",
+            "ª" => "&ordf;",
+            "«" => "&laquo;",
+            "¬" => "&not;",
+            "0" => "&shy;",
+            "®" => "&reg;",
+            "¯" => "&macr;",
+            "°" => "&deg;",
+            "±" => "&plusmn;",
+            "²" => "&sup2;",
+            "³" => "&sup3;",
+            "´" => "&acute;",
+            "µ" => "&micro;",
+            "¶" => "&para;",
+            "·" => "&middot;",
+            "¸" => "&cedil;",
+            "¹" => "&sup1;",
+            "º" => "&ordm;",
+            "»" => "&raquo;",
+            "¼" => "&frac14;",
+            "½" => "&frac12;",
+            "¾" => "&frac34;",
+            "¿" => "&iquest;",
+            "À" => "&Agrave;",
+            "Á" => "&Aacute;",
+            "Â" => "&Acirc;",
+            "Ã" => "&Atilde;",
+            "Ä" => "&Auml;",
+            "Å" => "&Aring;",
+            "Æ" => "&AElig;",
+            "Ç" => "&Ccedil;",
+            "È" => "&Egrave;",
+            "É" => "&Eacute;",
+            "Ê" => "&Ecirc;",
+            "Ë" => "&Euml;",
+            "Ì" => "&Igrave;",
+            "Í" => "&Iacute;",
+            "Î" => "&Icirc;",
+            "Ï" => "&Iuml;",
+            "Ð" => "&ETH;",
+            "Ñ" => "&Ntilde;",
+            "Ò" => "&Ograve",
+            "Ó" => "&Oacute;",
+            "Ô" => "&Ocirc;",
+            "Õ" => "&Otilde;",
+            "Ö" => "&Ouml;",
+            "×" => "&times;",
+            "Ø" => "&Oslash;",
+            "Ù" => "&Ugrave;",
+            "Ú" => "&Uacute;",
+            "Û" => "&Ucirc;",
+            "Ü" => "&Uuml;",
+            "Ý" => "&Yacute;",
+            "Þ" => "&THORN;",
+            "ß" => "&szlig;",
+            "à" => "&agrave;",
+            "á" => "&aacute;",
+            "â" => "&acirc;",
+            "ã" => "&atilde;",
+            "ä" => "&auml;",
+            "å" => "&aring;",
+            "æ" => "&aelig;",
+            "ç" => "&ccedil;",
+            "è" => "&egrave;",
+            "é" => "&eacute;",
+            "ê" => "&ecirc;",
+            "ë" => "&euml;",
+            "ì" => "&igrave;",
+            "í" => "&iacute;",
+            "î" => "&icirc;",
+            "ï" => "&iuml;",
+            "ð" => "&eth;",
+            "ñ" => "&ntilde;",
+            "ò" => "&ograve;",
+            "ó" => "&oacute;",
+            "ô" => "&ocirc;",
+            "õ" => "&otilde;",
+            "ö" => "&ouml;",
+            "÷" => "&divide;",
+            "ø" => "&oslash;",
+            "ù" => "&ugrave;",
+            "ú" => "&uacute;",
+            "û" => "&ucirc;",
+            "ü" => "&uuml;",
+            "ý" => "&yacute;",
+            "þ" => "&thorn;",
+            "ÿ" => "&yuml;",
+            "Œ" => "&OElig;",
+            "œ" => "&oelig;",
+            "Š" => "&Scaron;",
+            "š" => "&scaron;",
+            "Ÿ" => "&Yuml;",
+            "ˆ" => "&circ;",
+            "˜" => "&tilde;",
+            "–" => "&ndash;",
+            "—" => "&mdash;",
+            "‘" => "&lsquo;",
+            "’" => "&rsquo;",
+            "‚" => "&sbquo;",
+            "“" => "&ldquo;",
+            "”" => "&rdquo;",
+            "„" => "&bdquo;",
+            "†" => "&dagger;",
+            "‡" => "&Dagger;",
+            "‰" => "&permil;",
+            "‹" => "&lsaquo;",
+            "›" => "&rsaquo;",
+            "€" => "&euro;",
+        );
+
+        return str_replace(array_keys($conv), $conv, $str);
+    }
+
     /**
      * @param string $file
      *
@@ -91,12 +219,12 @@ class PoClass
                     case 'msgid':
                     case 'msgid_plural':
                         $state = $key;
-                        $temp[$state] = $_data;
+                        $temp[$state] = $this->cleanText($_data);
                         break;
 
                     case 'msgstr' :
                         $state = 'msgstr';
-                        $temp[$state][] = $_data;
+                        $temp[$state][] = $this->cleanText($_data);
                         break;
 
                     default :

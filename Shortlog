@@ -1,0 +1,13 @@
+Jorge Martín Martí (2):
+      Mejora de caracteres raros a html encode
+      Temporally fix basefile
+
+Patrick JL Laso (7):
+      - initial commit
+      - some minor changes in requirements
+      - fix comma in composer.json
+      - ConsoleArgs now as a external package
+      - change consoleArgs in sync.php
+      - fixed problems with non-latin chars
+      - added support for non-lzf compress
+

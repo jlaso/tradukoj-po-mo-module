@@ -9,8 +9,10 @@ class Tools
     public static function compilePo2Mo($baseFile)
     {
         $poFile = new PoClass();
-        $poFile->readFromFile($baseFile . '.po');
-        $poFile->writeMoFile($baseFile . '.mo');
+        //$poFile->readFromFile($baseFile . '.po');
+        //$poFile->writeMoFile($baseFile . '.mo');
+        shell_exec("msgfmt $baseFile.po -o $baseFile.mo");
+
     }
 
     /**
