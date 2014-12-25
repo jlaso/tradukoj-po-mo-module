@@ -1,0 +1,53 @@
+commit 536a5571a66b358883f3b2f965d5257f6e0ef977
+Author: Patrick JL Laso <wld1373@gmail.com>
+Date:   Thu Dec 25 20:52:59 2014 +0100
+
+    - added support for non-lzf compress
+
+commit dd89d6c48ecf5bc63f3b003a9bf840fa3d0ea8a1
+Author: Jorge Martín Martí <tcbpepo@gmail.com>
+Date:   Fri Nov 21 10:24:59 2014 -0500
+
+    Temporally fix basefile
+
+commit 6d14be3704fdf58b948293eea8e8d86404d304b0
+Author: Jorge Martín Martí <tcbpepo@gmail.com>
+Date:   Fri Nov 21 10:00:01 2014 -0500
+
+    Mejora de caracteres raros a html encode
+
+commit 6c0e30df77c2964b37e30bfca296bdb40da31b46
+Author: Patrick JL Laso <wld1373@gmail.com>
+Date:   Fri Nov 21 08:37:36 2014 -0500
+
+    - fixed problems with non-latin chars
+
+commit 7ffe38005681dcae695e29c7435e91dd6c7169a1
+Author: Patrick JL Laso <wld1373@gmail.com>
+Date:   Fri Nov 14 10:17:40 2014 -0500
+
+    - change consoleArgs in sync.php
+
+commit 3f533018ebdc2e55dc4b2754fd4b6e4fcfb206ca
+Author: Patrick JL Laso <wld1373@gmail.com>
+Date:   Fri Nov 14 10:13:34 2014 -0500
+
+    - ConsoleArgs now as a external package
+
+commit ac07a67d4585917ff5d4f6f1fdb2f17e902ffa01
+Author: Patrick JL Laso <wld1373@gmail.com>
+Date:   Wed Nov 5 23:01:14 2014 -0500
+
+    - fix comma in composer.json
+
+commit 541a74ba6703e3a64574a02b97f9ec7df45503a6
+Author: Patrick JL Laso <wld1373@gmail.com>
+Date:   Wed Nov 5 22:59:46 2014 -0500
+
+    - some minor changes in requirements
+
+commit 29eb6367631276003b966fa3b24910d275b36b82
+Author: Patrick JL Laso <wld1373@gmail.com>
+Date:   Wed Nov 5 22:31:27 2014 -0500
+
+    - initial commit
