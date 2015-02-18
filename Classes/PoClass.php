@@ -164,6 +164,9 @@ class PoClass
     }
 
     /**
+     * Inspired in the work of Joss Crowcroft
+     * https://github.com/phpmo/php.mo/blob/master/php-mo.php
+     * 
      * @param string $file
      *
      * @return bool
@@ -184,14 +187,6 @@ class PoClass
         // main loop
         while(($line = fgets($handle, 65536)) !== false) {
             $line = trim($line);
-//            if ('' === $line){
-//                //continue;
-//                $data[] = $temp;
-//                $temp = array();
-//            }
-
-//            print("line => $line \n");
-
             $tmp1 = preg_split('/\s/', $line, 2);
 
             if(count($tmp1) > 1){
@@ -259,21 +254,18 @@ class PoClass
         if ($state == 'msgstr'){
             $data[] = $temp;
         }
-        //var_dump($temp);die;
 
         $temp = $data;
         $data = array ();
         foreach ($temp as $entry) {
             foreach ($entry as & $value) {
                 $value = $this->clean($value);
-                //$value = _po_clean_helper($value);
                 if (false === $value) {
                     return false;
                 }
             }
             $data[$entry['msgid']] = $entry;
         }
-        //var_dump($data); //die;
         $this->data = $data;
 
         return true;
@@ -293,8 +285,6 @@ class PoClass
         ksort($data, SORT_STRING);
 
         foreach ($data as $entry) {
-
-            //print_r($entry); print "\n";
             $id = $entry['msgid'];
             if (isset ($entry['msgid_plural'])){
                 $id .= "\x00" . $entry['msgid_plural'];
